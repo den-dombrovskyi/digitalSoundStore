@@ -30,7 +30,7 @@ body {
   margin-bottom: 0;
   font-size: 48px;
   line-height: 100%;
-  font-weight: 800px;
+  font-weight: 800;
   font-style: italic;
   letter-spacing: -1.5px;
 }
@@ -47,6 +47,7 @@ body {
   height: 100vh;
   padding: 64px 120px;
   background: #e8eff9;
+  z-index: 100;
 }
 .menu:target {
   transform: translateX(-0%);
@@ -93,15 +94,9 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
-  @media (max-width: 744px) {
-    flex-direction: column;
-  }
 }
 .product {
   flex-basis: 324px;
-  @media (max-width: 744px) {
-    
-  }
 }
 .product__photo {
   width: 100%;
@@ -166,18 +161,10 @@ body {
   font-weight: bold;
   line-height: 100%;
   letter-spacing: -1.5px;
-  @media (max-width: 744px) {
-    width: 288px;
-    line-height: 100%;
-    font-size: 40px;
-  }
 }
 .how-to-buy__content {
   max-width: 496px;
   flex-basis: 50%;
-  @media (max-width: 744px) {
-    width: 288px;
-  }
 }
 .how-to-buy__benefits {
   display: flex;
@@ -188,9 +175,6 @@ body {
   margin: 0;
   margin-bottom: 40px;
   font-weight: bold;
-  @media (max-width: 744px) {
-    width: 288px;
-  }
 }
 .footer {
   position: sticky;
@@ -201,4 +185,69 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* ==========================================
+   MOBILE ADAPTIVE STYLES (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 32px 20px;
+    height: 100vh;
+  }
+
+  .header__title {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-top: 20px;
+  }
+
+  .menu {
+    padding: 32px 20px;
+  }
+
+  .main {
+    padding: 64px 20px;
+  }
+
+  .recommended {
+    margin-bottom: 64px;
+  }
+
+  .recommended__title,
+  .categories__title,
+  .how-to-buy__title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .recommended__products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 32px;
+  }
+
+  .categories {
+    margin-bottom: 64px;
+  }
+
+  .category {
+    margin-bottom: 32px;
+  }
+
+  .how-to-buy {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .how-to-buy__title,
+  .how-to-buy__content {
+    flex-basis: auto;
+    max-width: 100%;
+  }
 }
